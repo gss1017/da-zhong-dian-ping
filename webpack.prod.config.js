@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WebpackParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
+// const WebpackParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
@@ -161,20 +161,20 @@ module.exports = {
             chunkFilename: 'css/[name]_[contenthash].css'
         }),
 
-        new WebpackParallelUglifyPlugin({ // 并行压缩
-            uglifyJS: {
-                output: {
-                    beautify: false, //不需要格式化
-                    comments: false //不保留注释
-                },
-                compress: {
-                    warnings: false, // 在UglifyJs删除没有用到的代码时不输出警告
-                    drop_console: true, // 删除所有的 `console` 语句，可以兼容ie浏览器
-                    collapse_vars: true, // 内嵌定义了但是只用到一次的变量
-                    reduce_vars: true // 提取出出现多次但是没有定义成变量去引用的静态值
-                }
-            }
-        }),
+        // new WebpackParallelUglifyPlugin({ // 并行压缩
+        //     uglifyJS: {
+        //         output: {
+        //             beautify: false, //不需要格式化
+        //             comments: false //不保留注释
+        //         },
+        //         compress: {
+        //             warnings: false, // 在UglifyJs删除没有用到的代码时不输出警告
+        //             drop_console: true, // 删除所有的 `console` 语句，可以兼容ie浏览器
+        //             collapse_vars: true, // 内嵌定义了但是只用到一次的变量
+        //             reduce_vars: true // 提取出出现多次但是没有定义成变量去引用的静态值
+        //         }
+        //     }
+        // }),
         // 自定义js优化配置，将会覆盖默认配置
         // new UglifyJsPlugin({
         //     exclude: /\.min\.js$/, // 过滤掉以".min.js"结尾的文件，我们认为这个后缀本身就是已经压缩好的代码，没必要进行二次压缩
@@ -208,24 +208,7 @@ module.exports = {
         }),
 
         new webpack.HashedModuleIdsPlugin(), // 根据模块的相对路径生成一个四位数的hash作为模块id, 建议用于生产环境
-        // new webpack.NamedChunksPlugin((chunk) => {
-        //     console.log('-----ccccccc', Array.from(chunk.modulesIterable));
-        //     if (chunk.name) {
-        //         return chunk.name;
-        //     }
-        //     // const modules = Array.from(chunk.modulesIterable);
-        //     // if (modules.length > 1) {
-        //     //     const joinedHash = hashSum(modules.map(m => m.id).join('_'));
-        //     //     let len = nameLength;
-        //     //     while (seen.has(joinedHash.substr(0, len))) len++;
-        //     //     seen.add(joinedHash.substr(0, len));
-        //     //     return `chunk-${joinedHash.substr(0, len)}`;
-        //     // } else {
-        //     //     return modules[0].id;
-        //     // }
-        // })
     ],
-    devtool: 'cheap-module-inline-source-map',
     optimization: {
         runtimeChunk: 'single',
         // 分离 vendor 和 common，不再依赖 entry 手动指定 vendor
