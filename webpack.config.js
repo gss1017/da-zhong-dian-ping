@@ -79,12 +79,12 @@ module.exports = {
       strictExportPresence: true,
 
       rules: [
-          {
-              test: scriptRules,
-              include: SRC_PATH,
-              loader: 'eslint-loader',
-              enforce: 'pre'
-          },
+          // {
+          //     test: scriptRules,
+          //     include: SRC_PATH,
+          //     loader: 'eslint-loader',
+          //     enforce: 'pre'
+          // },
           {
               test: scriptRules,
               include: SRC_PATH,

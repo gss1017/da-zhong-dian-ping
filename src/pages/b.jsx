@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import E from './e';
 
 export default function () {
     return (
@@ -9,6 +10,9 @@ export default function () {
             </div>
             <div>
                 这里是B
+            </div>
+            <div>
+                <E/>
             </div>
         </div>
     );

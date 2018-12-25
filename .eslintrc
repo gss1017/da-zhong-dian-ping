@@ -24,6 +24,20 @@
     "navigator": true,
     "window": true
    // "node": true
+    // 解决 eslint 无法识别React 的合成事件。Flow类型规范event，需要用到这些。
+//    "SyntheticEvent": true,
+//    "SyntheticAnimationEvent": true,
+//    "SyntheticClipboardEvent": true,
+//    "SyntheticCompositionEvent": true,
+//    "SyntheticInputEvent": true,
+//    "SyntheticUIEvent": true,
+//    "SyntheticFocusEvent": true,
+//    "SyntheticKeyboardEvent": true,
+//    "SyntheticMouseEvent": true,
+//    "SyntheticDragEvent": true,
+//    "SyntheticWheelEvent": true,
+//    "SyntheticTouchEvent": true,
+//    "SyntheticTransitionEvent": true
   },
 
   // 继承第三方校验规则eslit-config-airbnb
@@ -45,6 +59,8 @@
     "css-modules"
   ],
   "rules": {
+    // 仅 IDE 检查提示，实际构建不检查
+
    // "comma-dangle": ["error", "never"], // 要求或禁止末尾逗号：不允许逗号
     "indent": ["error", 4], // Javacript 代码强制使用一致的缩进：4格缩进
 
@@ -97,20 +113,25 @@
     "import/prefer-default-export": "off",
     // 不支持 私有域 @pkfare/xxx 的用法识别，关闭
     "import/no-extraneous-dependencies": "off",
+    "import/no-duplicates": "off",
+    "import/no-unresolved": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
 
     "jsx-a11y/anchor-is-valid": "off",
-    "jsx-a11y/click-events-have-key-events": "warn",
-    "jsx-a11y/mouse-events-have-key-events": "warn",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/mouse-events-have-key-events": "off",
     "jsx-a11y/no-noninteractive-element-interactions": "off", // 不作要求
     "jsx-a11y/no-static-element-interactions": "off",
 
     "react/jsx-indent": "off",
+    "react/jsx-indent-props": "off",
     "react/forbid-prop-types": "warn",
     "react/jsx-boolean-value": ["error", "always"],
     "react/jsx-no-bind": "off",
     "react/jsx-no-target-blank": "warn",
     "react/jsx-tag-spacing": "off",
-    "react/prop-types": ["warn", {"ignore": ["className", "style"]}],
+    "react/prop-types": ["off", {"ignore": ["className", "style"]}],
     "react/no-array-index-key": "warn",
     "react/no-danger": "off",
     "react/no-typos": "off",
@@ -130,7 +151,8 @@
         "everything-else",
         "render"
       ]
-    }]
+    }],
+    "react/destructuring-assignment": "off"
 //    "global-require": "off" // 是否规定require必须出现在顶层
   }
 }
