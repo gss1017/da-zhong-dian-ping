@@ -56,6 +56,7 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "rm -rf ./dist && webpack --config webpack.prod.config.js",
+    "build:json": "rm -rf ./dist && webpack --config webpack.prod.config.js --profile --json > stats.json",
     "pack": "NODE_ENV=production npm pack"
   },
   "lint-staged": {
