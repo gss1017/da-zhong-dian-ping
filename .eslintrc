@@ -152,6 +152,7 @@
         "render"
       ]
     }],
+    "linebreak-style": ["off", "windows"],
     "react/destructuring-assignment": "off"
 //    "global-require": "off" // 是否规定require必须出现在顶层
   }
