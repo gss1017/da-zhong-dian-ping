@@ -70,7 +70,7 @@ module.exports = {
     output: {
         filename: 'js/[name]_[chunkhash].js',
         path: BUILD_PATH,
-        publicPath: 'dist/',
+        publicPath: '/dist/',
         chunkFilename: 'js/chunk-[name]_[chunkhash].js'
     },
     resolve: {
