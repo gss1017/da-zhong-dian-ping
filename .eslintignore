@@ -10,3 +10,4 @@ Test*
 eslint.js
 *.html
 postcss.config.js
+jest.config.js

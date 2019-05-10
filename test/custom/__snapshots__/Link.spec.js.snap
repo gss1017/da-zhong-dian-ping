@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`link.js Link changes then class when hovered 1`] = `
+<a
+  className="normal"
+  href="/b"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  走你
+</a>
+`;
+
+exports[`link.js Link changes then class when hovered 2`] = `
+<a
+  className="hovered"
+  href="/b"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  走你
+</a>
+`;
+
+exports[`link.js Link changes then class when hovered 3`] = `
+<a
+  className="normal"
+  href="/b"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  走你
+</a>
+`;
+
+exports[`link.js Link changes then class when hovered no href 1`] = `
+<a
+  className="normal"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  走你
+</a>
+`;

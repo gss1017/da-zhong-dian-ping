@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1557223568670" clover="3.2.0">
+  <project timestamp="1557223568670" name="All files">
+    <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="9" coveredmethods="9" elements="28" coveredelements="28" complexity="0" loc="15" ncloc="15" packages="2" files="3" classes="3">
+      <package name="src">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="cc.js" path="/Users/gss/da-zhong-dian-ping/src/cc.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="2" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.pages.custom">
+        <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="8" coveredmethods="8"/>
+        <file name="CheckboxWithLabel.jsx" path="/Users/gss/da-zhong-dian-ping/src/pages/custom/CheckboxWithLabel.jsx">
+          <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+        </file>
+        <file name="Link.jsx" path="/Users/gss/da-zhong-dian-ping/src/pages/custom/Link.jsx">
+          <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="30" count="4" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

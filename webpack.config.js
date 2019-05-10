@@ -72,7 +72,7 @@ module.exports = {
         publicPath: '/'
     },
     resolve: {
-      extensions: ['.js', '.jsx'] // webpack 编译时自动补充后缀
+      extensions: ['.js', '.jsx', '.scss'] // webpack 编译时自动补充后缀
     },
     module: {
       // 导出模块找不到 直接报错
