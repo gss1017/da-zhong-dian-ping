@@ -16,6 +16,7 @@ class E extends React.Component {
         const {userInfo} = this.props;
         return (
             <div>
+                <h2>this is E</h2>
                 <div>{userInfo.name}</div>
                 <div>{userInfo.city}</div>
                 <div

@@ -21,7 +21,8 @@ const scssLoaders = [
             importLoaders: 2,
             // CSS Modules https://github.com/css-modules/css-modules
             modules: true,
-            localIdentName: '[name]_[local]_[hash:base64:4]', // 保留原始类名，以便数据上报
+            // localIdentName: '[name]_[local]_[hash:base64:4]', // 保留原始类名，以便数据上报
+            localIdentName: '[local]', // 保留原始类名，以便数据上报
             minimize: false,
             discardComments: {removeAll: false},
         }
@@ -45,7 +46,8 @@ const cssLoaders = [
             // CSS Loader https://github.com/webpack/css-loader
             importLoaders: 1,
             modules: true, // 启用css 模块化
-            localIdentName: '[name]_[local]_[hash:base64:4]',
+            // localIdentName: '[name]_[local]_[hash:base64:4]',
+            localIdentName: '[local]',
             minimize: false,
             discardComments: {removeAll: false},
         }
@@ -72,7 +74,8 @@ module.exports = {
         publicPath: '/'
     },
     resolve: {
-      extensions: ['.js', '.jsx'] // webpack 编译时自动补充后缀
+        modules: ['node_modules', 'src'],
+        extensions: ['.js', '.jsx'] // webpack 编译时自动补充后缀
     },
     module: {
       // 导出模块找不到 直接报错

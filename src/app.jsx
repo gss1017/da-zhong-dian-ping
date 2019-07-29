@@ -54,6 +54,9 @@ class App extends React.Component {
                                     <span className={style.color}>
                                      你好
                                     </span>
+                                    <span>
+                                        <input type="text" value={11111}/>
+                                    </span>
                                 </h1>
                                 <div>
                                     <Route path="/" component={D}/>

@@ -23,6 +23,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.1",
+    "cypress": "^3.2.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-loader": "^2.1.1",
@@ -57,7 +58,8 @@
     "dev": "webpack-dev-server",
     "build": "rm -rf ./dist && webpack --config webpack.prod.config.js",
     "build:json": "rm -rf ./dist && webpack --config webpack.prod.config.js --profile --json > stats.json",
-    "pack": "NODE_ENV=production npm pack"
+    "pack": "NODE_ENV=production npm pack",
+    "cypress:open": "cypress open"
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
