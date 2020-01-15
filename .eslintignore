@@ -1,8 +1,8 @@
 /node_modules
 test/
 dist/
-/webpack.config.js
-/webpack.prod.config.js
+webpack.config.js
+webpack.prod.config.js
 .*/
 mock*
 test*
@@ -10,3 +10,4 @@ Test*
 eslint.js
 *.html
 postcss.config.js
+cypress/

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import E from './e';
+import E from 'pages/e';
 
 export default function () {
     return (
